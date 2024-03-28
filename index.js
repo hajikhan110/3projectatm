@@ -35,15 +35,15 @@ if (pinans.pin1 === mypin) {
             }
         ]);
         //
-        console.log("amoutselected");
-        console.log(selectionAmount.amount);
+        console.log(`trasaction processed   ${selectionAmount.amount} `);
+        //console.log("amoutselected"); 
+        //console.log(selectionAmount.amount); 
         if (selectionAmount.amount > mybalance) {
-            console.log("amout selected is great than balance");
+            console.log(`amout selected  ${selectionAmount.amount} is great than yr balance ${mybalance}`);
         }
         else {
             let remainingAmount = mybalance - selectionAmount.amount;
-            console.log("trasaction processed :remainingAmount");
-            console.log(remainingAmount);
+            console.log(`trasaction processed :remainingAmount  ${remainingAmount} `);
         }
     }
     //balance start
