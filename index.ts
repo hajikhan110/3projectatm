@@ -8,7 +8,7 @@ let pinans: any= await inquirer.prompt(
 [
 {
 name: "pin1",
-message: "emter pin",
+message: "enter pin for example mypin 8",
 type: "number"
 }
 ]
