@@ -49,8 +49,6 @@ if (pinans.pin1 === mypin) {
         console.log(mybalance);
         //now select amount
     }
-    //b end
-    //}
 }
 else {
     console.log("\n pin wrong");
