@@ -1,7 +1,8 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
-let mybalance: number = 1000;
+let mybalance: number = 5000;
 let mypin: number = 8;
+//
 
 let pinans: any= await inquirer.prompt(
 [
@@ -38,9 +39,9 @@ let selectionAmount: any= await inquirer.prompt(
 [
 {
 name: "amount",
-message: " type required amount",
-type: "number"
-//choices: ["withdraw","balance"]
+message: " select required amount",
+type: "list",
+choices: ["500","1000","2000"]
 }
 ]
 );
@@ -51,6 +52,7 @@ if(selectionAmount.amount>mybalance){
  console.log("amout selected is great than balance");    
 }else {
 let remainingAmount: number=mybalance-selectionAmount.amount
+console.log("trasaction processed :remainingAmount")
 console.log(remainingAmount); }
 
 }
@@ -67,4 +69,3 @@ if(selectionAns.option=="balance")
 }else{
     console.log("\n pin wrong");
 }
-

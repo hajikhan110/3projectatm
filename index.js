@@ -1,7 +1,8 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
-let mybalance = 1000;
+let mybalance = 5000;
 let mypin = 8;
+//
 let pinans = await inquirer.prompt([
     {
         name: "pin1",
@@ -28,9 +29,9 @@ if (pinans.pin1 === mypin) {
         let selectionAmount = await inquirer.prompt([
             {
                 name: "amount",
-                message: " type required amount",
-                type: "number"
-                //choices: ["withdraw","balance"]
+                message: " select required amount",
+                type: "list",
+                choices: ["500", "1000", "2000"]
             }
         ]);
         //
@@ -41,6 +42,7 @@ if (pinans.pin1 === mypin) {
         }
         else {
             let remainingAmount = mybalance - selectionAmount.amount;
+            console.log("trasaction processed :remainingAmount");
             console.log(remainingAmount);
         }
     }
